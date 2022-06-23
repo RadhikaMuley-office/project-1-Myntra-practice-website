@@ -1,0 +1,19 @@
+/* IMPORTING ANOTHER CSS FILE IMPORT ONly in top */
+@import url("./myntra-header.css");/*import the hesder css sheet */
+@import url("./myntra-slider.css"); /* import the slider css sheet */
+@import url("./myntra-category.css");/* import the slider css sheet */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Whitney";
+    src: url("../fonts/whitneymedium.otf");
+}
+body{
+    font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    background-color: #eee;
+}
+

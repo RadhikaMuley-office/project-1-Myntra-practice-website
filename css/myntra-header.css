@@ -1,0 +1,379 @@
+:root{
+    --primary-color:#282c3f;
+    --pink-color:#ff3f6c;
+    --sprite-image:url("../images/MyntraWebSprite_27_01_2021.png");
+    --gray-background:#fff;
+    --border-color:#c7c7c7;
+    
+}
+
+/* section#myntra-header starts here */
+#myntra-header{
+background-color: #fff;
+height: 80px;
+width: 100%;
+box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%); /* from website */
+position: relative;
+}
+
+
+#myntra-header > article {
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit; /*inherits from parent*/
+}
+
+#myntra-header > article :is(aside.left_header_block,aside.right_header_block){
+    display: flex;
+    justify-content:flex-start;;
+    align-items: center;
+    /* border: 2px solid red; */
+    flex-basis: 50%;
+    height: 80%;
+
+}
+
+#myntra-header > article > aside.left_header_block div:first-child{
+    flex-basis: 15%;
+}
+
+#myntra-header > article > aside.left_header_block > div :last-child{
+flex-basis: 85%;
+}
+
+#myntra-header > article > aside.right_header_block > div :first-child{
+    flex-basis: 80%;
+}
+
+#myntra-header > article > aside.right_header_block div > :first-child{
+    flex-basis: 20%;
+}
+
+
+.logoBlock a{
+    background: var(--sprite-image);
+    width: 53px;
+    height: 36px;
+    background-position: -462px 0;
+    background-size:1404px 105px;
+    display: inline-block;
+    vertical-align: middle;padding: 0;margin: 0;
+    cursor:pointer;
+}
+
+.mainMenu > ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6%;    
+}
+
+.mainMenu ul > li > a{
+    text-decoration: none;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.mainMenu ul > li > a sup{
+    color: var(--pink-color);
+}
+
+.searchBlock span > input {
+    width: 82%;
+    padding: 13px 157px 13px;
+    margin: 0;
+    outline: 0;
+    border: 1px solid #f5f5f6;
+    border-radius: 0 4px 4px 0;
+    border-left: 0;
+    background: #f5f5f6;
+
+}
+
+.searchBlock:first-child {
+    position: relative;
+}
+
+.searchBlock:first-child i{
+    position: absolute;
+    border-radius: 2px 0 0 2px;
+    background: #f5f5f6;
+    left: 14px;
+    bottom:7px;;
+    font-size: 14px;
+    padding: 13px;
+    color: var(--primary-color);
+}
+
+.authMenu > nav > ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    text-align: center;
+
+}
+
+.authMenu > nav > ul > li a{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 700;
+    display: flex;align-items: center;justify-content: center;
+    flex-direction: column;
+    gap: 4%;
+}
+
+.userIcon{
+    background: var(--sprite-image);
+    background-position: -298px -56px;
+    background-size: 1404px 105px;
+    width: 24px;
+    height: 24px;
+}
+
+.wishlistIcon{
+    background: var(--sprite-image);
+    background-position: -315px -187px;
+    background-size: 1404px 105px;
+    width: 17px;
+    height: 22px;
+}
+
+.bagIcon{
+    background: var(--sprite-image);
+    background-size: 1404px 105px;
+    width: 22px;
+    height: 22px;
+    background-position: -341px -56px;
+
+}
+
+.authMenu > nav > ul > li > div.dropdown{
+    /* background-color: red; connected successfully */
+
+    width: 250px;
+    min-height: 300px;
+    max-height: 400px;
+    background-color: white;
+    position: absolute;
+    top: 81px;
+    right: 22%;
+    transform: translate(50%, 0px);
+    box-shadow: 4px 12px 0 rgb(0 0 0 / 5%);
+    /* border: 2px solid red;    /* to make this dropdown hidden */
+    visibility:hidden;
+    opacity: 0;
+    transition: ease all 0.5s;
+} 
+
+.dropdown article{
+    padding: 15px;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.dropdown article > header h2{
+    font-size: 15px;
+}
+
+.dropdown article > header > p {
+    font-size: 14px;
+}
+
+.dropdown article > header > p > a {
+    width: 130px;
+    border: 1px solid #efefef;
+    display: inline-block;
+    height: 40px;
+    margin: 10px 0px;
+    text-align: center;
+    color: var(--pink-color);
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+
+.dropdown article > header > p > a:hover{
+
+    border: 1px solid var(--pink-color);
+}
+
+.dropdown article > header {
+    border-bottom: 1px solid var(--border-color);
+
+}
+
+.dropdown article  :is(main) {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.dropdown article :is(main > ul , footer >ul ){
+    list-style:none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.dropdown article :is(main > ul > li > a , footer > ul >li > a ){
+    text-decoration: none;
+    color:#3e4152;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.dropdown article footer {
+    padding-bottom: 20px;
+}
+
+.dropdown article :is(main , footer ) a:hover{
+    color: deeppink;
+}
+
+.new-clip{
+    background-color:deeppink;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    width: 40px;
+    display: inline-block;
+
+height: 19px;
+}
+
+.authMenu > nav > ul > li:hover > div.dropdown {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.dropdown::before{
+    content: "";
+    width: 70px;
+    display: inline-block;
+    border-top: 4px solid var(--pink-color);
+    position: absolute;
+    left: 50%;
+    text-transform: translate(-50%,-6%);
+}
+
+.menu-list{
+    position: relative;
+}
+
+#megaMenu{
+    display: flex;
+    position: absolute;
+    top: 53px;
+    left: -89px;
+    background: white;
+    min-width: 1112px;
+    max-width: 1112px;
+    padding: 10px;
+    height: 75vh;
+}
+
+#megaMenu > article {
+    display: flex;
+    justify-content: center;
+    /* added afterwards */
+    padding: 0 30px;
+
+}
+
+#megaMenu > article > div {
+    flex: 1;
+    padding: 15px;
+} 
+
+#megaMenu > article > div > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    list-style: none;
+    width: 183px;
+    
+}
+
+.mainMenu > article > div > ul > li >a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 400;
+    font-family: system-ui;
+    font-size: 14px;
+    line-height: 25px;
+    
+}
+
+#megaMenu > article > div > ul >li:first-child > a {
+    color: var(--pink-color);
+    font-weight: bold;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    list-style: none;
+}
+
+.megaMenu > article > div :nth-child(odd) {
+    background-color: var(--gray-background)
+}
+
+.megaMenu > article > div :nth-child(even) {
+    background-color: #efefef;
+}
+
+#megaMenu > article > div  {
+    flex-basis: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+#megaMenu > article .border-bottom {
+    border-bottom: 1px solid var(--border-color);
+    padding: 6px 0;
+    width: 100%;
+    display: block;
+
+}
+
+#megaMenu > article #pink-text-color > a {
+    padding-top: 10px;
+    display: block;
+    color: deeppink;
+}
+
+#menuItem > ul > li > a {
+padding: 20px 19px;    
+}
+
+.mainMenu > ul > li:hover #megaMenu{
+    visibility: visible;
+    opacity: 1;
+    transition: ease all 0.6s;
+    z-index: 1;
+}
+
+#megaMenu {
+    visibility:hidden;
+    opacity:0;
+    transition: ease-in 0.9s;
+}
+
+
+
+
+
+
+

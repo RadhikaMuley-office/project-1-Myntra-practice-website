@@ -1,0 +1,26 @@
+@import url("./myntra_header.css");
+@import url("./myntra-slider.css");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: "whitney";
+    src:url('../fonts/whitneymedium.otf');
+}
+
+body{
+    font-family: whitney, -apple-system, BlinkMacSystemFont, Segoe UI,Roboto, Helvetica, Arial, sans-serif;
+    background-color: #eee;
+}
+
+:root{
+    --pink-color: #ff3f6c;
+    --border-color:#eaeaec;
+    --primary-color: #282c3f;
+    --sprite-img:url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+    --gray-background:rgba(245, 245, 246, 0.4);
+}
